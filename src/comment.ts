@@ -3,7 +3,7 @@ import TimeUtil from '@pefish/js-util-time';
 import Email from './util/email';
 
 export default class CommentNotify {
-  private currentCount: number = 6
+  private currentCount: number = 0
 
   async start () {
     const query = new AV.Query('Comment');

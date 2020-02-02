@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "",
   "dependencies": {
+    "@pefish/js-helper-logger": "^0.0.9",
     "@pefish/js-node-assist": "^0.6.15",
-    "@pefish/js-util-config": "^0.2.1",
-    "@pefish/js-util-starter": "^0.0.7",
+    "@pefish/js-util-config": "^0.2.3",
+    "@pefish/js-util-starter": "^0.0.8",
     "@pefish/js-util-time": "^0.0.3",
     "leancloud-storage": "2",
     "nodemailer": "^6.4.2"
