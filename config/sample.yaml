@@ -1,3 +1,4 @@
 env: local
 emailTarget: pefish@qq.com
 blogUrl: https://www.pefish.club
+interval: 20000

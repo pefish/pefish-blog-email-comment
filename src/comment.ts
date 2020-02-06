@@ -12,9 +12,10 @@ export default class CommentNotify {
       global.logger.debug(`检测中...`)
       try {
         const commentCount: number = await query.count()
+        global.logger.debug(`评论总数：${commentCount}, 当前数量：${this.currentCount}`)
         if (commentCount > this.currentCount && this.currentCount !== 0) {
           const count = commentCount - this.currentCount
-          global.logger.debug(`新增${count}条记录`)
+          global.logger.info(`新增${count}条记录`)
           // 查询多出来的记录
           query.addDescending(`insertedAt`)
           query.limit(commentCount - this.currentCount)
@@ -38,14 +39,14 @@ export default class CommentNotify {
             </p>
             <p><a href="${global.config.blogUrl}${comment._serverData.url}" style="display: inline-block; padding: 10px 20px; border-radius: 4px; background-color: #3090e4; color: #fff; text-decoration: none;">马上回复</a></p>
             `)
-            global.logger.debug(`messageId: ${messageId}`)
+            global.logger.info(`messageId: ${messageId}`)
           }
         }
         this.currentCount = commentCount
       } catch (err) {
         global.logger.error(err)
       }
-      await TimeUtil.sleep(3000)
+      await TimeUtil.sleep(global.config.interval)
     }
   }
 }
