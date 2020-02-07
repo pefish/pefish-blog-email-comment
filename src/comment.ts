@@ -6,11 +6,11 @@ export default class CommentNotify {
   private currentCount: number = 0
 
   async start () {
-    const query = new AV.Query('Comment');
     const email = new Email()
     while (true) {
       global.logger.debug(`检测中...`)
       try {
+        const query = new AV.Query('Comment')
         const commentCount: number = await query.count()
         global.logger.debug(`评论总数：${commentCount}, 当前数量：${this.currentCount}`)
         if (commentCount > this.currentCount && this.currentCount !== 0) {
