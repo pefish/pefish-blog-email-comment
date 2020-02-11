@@ -37,10 +37,10 @@
   dependencies:
     "@pefish/js-error" "^0.1.2"
 
-"@pefish/js-util-time@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@pefish/js-util-time/-/js-util-time-0.0.3.tgz#89afa2ea79635d22100292c11724e05e7e2b7868"
-  integrity sha512-7DNmx5oYjQrZUBtYxqph4ji07kcbCE6pP9g637Xzf0Fp7+MPuOnznd7DJ7W+7fmUkAVz+JTD+nrOybAJr2ksHA==
+"@pefish/js-util-time@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@pefish/js-util-time/-/js-util-time-0.0.5.tgz#4517e4bf5ffefb3702d61c732148d8ae9950719c"
+  integrity sha512-ydypwmgB18GsUB/ULDq+1gtCTCFh/4Qw6aCuBvQRe5A9jYxP/yRGL34iinZue7AkASXcjjwYWdHkKxzuvQt7Sg==
   dependencies:
     "@pefish/js-node-assist" "^0.6.6"
     moment "^2.24.0"
